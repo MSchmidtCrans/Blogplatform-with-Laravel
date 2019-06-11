@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::get('/blog', function () {
     return view('blog/blogwelcome');
 });
+
+Route::post('/blog', function () {
+    return view('blog/succes');
+});
