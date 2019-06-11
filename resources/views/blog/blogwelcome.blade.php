@@ -15,8 +15,10 @@
     
 
     <form  method="post"  action="/blog">
+
     @csrf
-    <textarea name="blogtext" id="" cols="30" rows="10" placeholder="Type uw blog"></textarea></br>
+    
+    <textarea name="blogtext" id="" cols="60" rows="15" placeholder="Type uw blog"></textarea></br>
 
     <button type="submit">Opslaan</button>
     
