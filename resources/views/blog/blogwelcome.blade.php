@@ -10,7 +10,17 @@
     </head>
     <body>
 
-        <h1>Welkom op mijn blog pagina</h1>
+        <h1>Welkom op mijn blog pagina</h1></br>
             
+    @csrf
+
+    <form action="" method="post">
+    
+    <textarea name="blogtext" id="" cols="30" rows="10" placeholder="Type uw blog"></textarea></br>
+
+    <button type="submit">Opslaan</button>
+    
+    </form>
+
     </body>
 </html>
