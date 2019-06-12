@@ -33,9 +33,18 @@ class blogController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+
     public function store(Request $request)
     {
-        //
+        request()->validate([
+            'titel' => 'required',
+            'blogtext' => 'required'
+        ]);
+
+        blog::create(request(['titel' ,'blogtext']));
+
+        return redirect('/blog');
     }
 
     /**
