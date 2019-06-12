@@ -36,3 +36,5 @@ Blogger must be able to add a pciture to his/her blog:
 4. Adapt controller to store file properties. -done-
 
 5. Adapt show blog view to show the stores picture. -done-
+
+6. Picture can now be added when editing a blog. -done-
