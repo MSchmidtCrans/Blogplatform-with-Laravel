@@ -10,6 +10,8 @@
             
             <input type="text" name="titel" id="" placeholder="Blog titel"></br></br>
             <textarea name="blogtext" id="" cols="60" rows="15" placeholder="Type uw blog"></textarea></br>
+
+            <label for="picture">Kies een afbeelding: </label>
             <input type="file" name="picture" id=""></br>
 
             <button type="submit">Opslaan</button>
