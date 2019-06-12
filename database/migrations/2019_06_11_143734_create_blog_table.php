@@ -17,6 +17,9 @@ class CreateBlogTable extends Migration
             $table->bigIncrements('id');
             $table->text('titel');
             $table->longtext('blogtext');
+            $table->string('filename')->nullable();
+            $table->string('picture')->nullable();
+            $table->string('original_filename')->nullable();
             $table->timestamps();
             
         });

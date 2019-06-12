@@ -4,13 +4,14 @@
 
     <h1>Maak hier een nieuwe blog</h1>
             
-            <form  method="post"  action="/blog">
+            <form  method="post"  action="/blog" enctype="multipart/form-data">
         
             @csrf
             
             <input type="text" name="titel" id="" placeholder="Blog titel"></br></br>
             <textarea name="blogtext" id="" cols="60" rows="15" placeholder="Type uw blog"></textarea></br>
-        
+            <input type="file" name="picture" id=""></br>
+
             <button type="submit">Opslaan</button>
             
             </form>
