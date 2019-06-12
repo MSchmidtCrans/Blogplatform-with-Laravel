@@ -12,7 +12,7 @@ Demo: <a href="https://mschmidtcrans.github.io/Blogplatform-with-Laravel/">Click
 3. Set up routing following Laravel routing convention and Laravel resource. -done-
     - Make a new controller and model with the artisan -> resource command
 
-<b>Blogger wants to create new blogs and be able to edit his blogs:</b>
+<strong>Blogger wants to create new blogs and be able to edit his blogs:</strong>
 
 1. Create a create new blog view. -done-
 
@@ -27,7 +27,7 @@ Demo: <a href="https://mschmidtcrans.github.io/Blogplatform-with-Laravel/">Click
 6. Make a delete view to destroy a record and adapt the controller accordingly.  -done-
 
 
-<b>Blogger must be able to add a pciture to his/her blog:</b>
+<strong>Blogger must be able to add a pciture to his/her blog:</strong>
 
 1.  Adapt blog model to store fileproperties in the blog table and migrate model. -done-
 
@@ -41,8 +41,8 @@ Demo: <a href="https://mschmidtcrans.github.io/Blogplatform-with-Laravel/">Click
 
 6. Picture can now be added when editing a blog. -done-
 
-<b>Blogger can create new categories.
+<strong>Blogger can create new categories.
 Blogger can assign an article to a category.
-Blogger can assign an article to mutiple categories.</b>
+Blogger can assign an article to mutiple categories.</strong>
 
 1. 
