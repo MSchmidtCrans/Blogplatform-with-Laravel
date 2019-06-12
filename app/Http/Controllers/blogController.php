@@ -36,30 +36,31 @@ class blogController extends Controller
             'titel' => 'required',
             'blogtext' => 'required'
         ]);
-        
+       
+            $mime = null;
+            $filename = null;
+            $original_filename = null;
+
+        if ($request->picture != null) {
         //Get picture file and set variables
         $picturefile = $request->file('picture');
         $pictureExtension = $picturefile->getClientOriginalExtension();
+        $mime = $picturefile->getClientMimeType();
+        $filename = $picturefile->getFilename().'.'.$pictureExtension;
+        $original_filename = $picturefile->getClientOriginalName();
 
         //Store file
         Storage::disk('public')->put($picturefile->getFilename().'.'.$pictureExtension,  File::get($picturefile));
-        
+        }
+
         //Save new values to DB
         $blog = new blog;
         $blog->titel = $request->titel;
         $blog->blogtext = $request->blogtext;
-        $blog->mime = $picturefile->getClientMimeType();
-        $blog->original_filename = $picturefile->getClientOriginalName();
-        $blog->filename = $picturefile->getFilename().'.'.$pictureExtension;
-
-
-        //dd($blog);
-
-        //Store in DB
+        $blog->mime = $mime;
+        $blog->original_filename = $original_filename;
+        $blog->filename = $filename;
         $blog->save();
-
-
-        //blog::create(request(['titel' ,'blogtext', $filename, $mime, $original_filename]));
 
         return redirect('/blog');
     }
