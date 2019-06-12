@@ -14,7 +14,7 @@ In this project I'll create a blog platform based on user stories provided by th
 
 6. Make a new index view to display stored table records. And adapt the controller accordingly. -done-
 
-7. Make a show one blog view for displaying a single blog record and adapt the controller accordingly.
+7. Make a show one blog view for displaying a single blog record and adapt the controller accordingly. -done-
 
 8. Make a edit view to edit a blog record and adapt the controller accordingly.
 
