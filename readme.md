@@ -3,6 +3,8 @@ In this project I'll create a blog platform based on user stories provided by th
 
 For user stories check: <a href="https://github.com/florisknol/codegorilla/blob/master/CodeGorilla_blogplatform.md">USER STORIES</a>
 
+Demo: <a href="https://mschmidtcrans.github.io/Blogplatform-with-Laravel/">Click me</a>
+
 1. Setup laravel and github. -done-
 
 2. Create first route and test views. -done-
@@ -10,7 +12,7 @@ For user stories check: <a href="https://github.com/florisknol/codegorilla/blob/
 3. Set up routing following Laravel routing convention and Laravel resource. -done-
     - Make a new controller and model with the artisan -> resource command
 
-Blogger wants to create new blogs and be able to edit his blogs:
+<b>Blogger wants to create new blogs and be able to edit his blogs:</b>
 
 1. Create a create new blog view. -done-
 
@@ -25,7 +27,7 @@ Blogger wants to create new blogs and be able to edit his blogs:
 6. Make a delete view to destroy a record and adapt the controller accordingly.  -done-
 
 
-Blogger must be able to add a pciture to his/her blog:
+<b>Blogger must be able to add a pciture to his/her blog:</b>
 
 1.  Adapt blog model to store fileproperties in the blog table and migrate model. -done-
 
@@ -38,3 +40,9 @@ Blogger must be able to add a pciture to his/her blog:
 5. Adapt show blog view to show the stores picture. -done-
 
 6. Picture can now be added when editing a blog. -done-
+
+<b>Blogger can create new categories.
+Blogger can assign an article to a category.
+Blogger can assign an article to mutiple categories.</b>
+
+1. 

@@ -7,9 +7,10 @@
     @foreach ($blogs as $blog)
 
 <li>
+    <img  src="{{url('uploads/'.$blog->filename)}}" alt="{{$blog->filename}}" style="width: 20px; height: auto;">
     <a href="/blog/ {{ $blog->id }}">
     {{$blog->titel}}
-    </a>
+    </a></br></br>
 </li>
 
 @endforeach
