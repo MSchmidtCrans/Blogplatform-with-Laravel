@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\blog;
 use Illuminate\Http\Request;
+use Storage;
+use File;
 
 class blogController extends Controller
 {
@@ -34,8 +36,30 @@ class blogController extends Controller
             'titel' => 'required',
             'blogtext' => 'required'
         ]);
+        
+        //Get picture file and set variables
+        $picturefile = $request->file('picture');
+        $pictureExtension = $picturefile->getClientOriginalExtension();
 
-        blog::create(request(['titel' ,'blogtext']));
+        //Store file
+        Storage::disk('public')->put($picturefile->getFilename().'.'.$pictureExtension,  File::get($picturefile));
+        
+        //Save new values to DB
+        $blog = new blog;
+        $blog->titel = $request->titel;
+        $blog->blogtext = $request->blogtext;
+        $blog->mime = $picturefile->getClientMimeType();
+        $blog->original_filename = $picturefile->getClientOriginalName();
+        $blog->filename = $picturefile->getFilename().'.'.$pictureExtension;
+
+
+        //dd($blog);
+
+        //Store in DB
+        $blog->save();
+
+
+        //blog::create(request(['titel' ,'blogtext', $filename, $mime, $original_filename]));
 
         return redirect('/blog');
     }

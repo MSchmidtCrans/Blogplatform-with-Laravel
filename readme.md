@@ -29,10 +29,10 @@ Blogger must be able to add a pciture to his/her blog:
 
 1.  Adapt blog model to store fileproperties in the blog table and migrate model. -done-
 
-2. Create file input field in 'create blog' view to select the picture.
+2. Create file input field in 'create blog' view to select the picture. -done-
 
-3. Configure the laravel file system to store pictures in the public folder.
+3. Configure the laravel file system to store pictures in the public folder. -done-
 
-4. Adapt controller to store file properties.
+4. Adapt controller to store file properties. -done-
 
 5. Adapt show blog view to show the stores picture.
