@@ -18,4 +18,4 @@ In this project I'll create a blog platform based on user stories provided by th
 
 8. Make a edit view to edit a blog record and adapt the controller accordingly. -done-
 
-9. Make a delete view to destroy a record and adapt the controller accordingly.
+9. Make a delete view to destroy a record and adapt the controller accordingly.  -done-
