@@ -12,7 +12,8 @@
     </a>
 </li>
 
-
 @endforeach
+
+</br><a href="/blog/create">Maak een nieuwe blog</a>
 
 @endsection
