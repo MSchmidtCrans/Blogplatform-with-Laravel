@@ -16,6 +16,6 @@ In this project I'll create a blog platform based on user stories provided by th
 
 7. Make a show one blog view for displaying a single blog record and adapt the controller accordingly. -done-
 
-8. Make a edit view to edit a blog record and adapt the controller accordingly.
+8. Make a edit view to edit a blog record and adapt the controller accordingly. -done-
 
 9. Make a delete view to destroy a record and adapt the controller accordingly.
