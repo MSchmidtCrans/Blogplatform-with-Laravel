@@ -14,11 +14,16 @@
                     <input type="text" name="titel" class="form-control" id="" placeholder="Blog titel"></br></br>
                     <textarea name="blogtext" class="form-control" id="" cols="60" rows="6" placeholder="Type uw blog"></textarea></br>
                 </div>
-
+                
+                <div>
+                Categorie: 
+                @foreach ($x as $option)
                 <div class="form-check-inline form-group">
-                        <input type="checkbox" class="form-check-input" id="" name="check1"> {{ $x[0]->categorieOption }}
+                        <input type="checkbox" class="form-check-input" id="" name="check1"> {{ $option->categorieOption }}
                 </div> 
-
+                @endforeach
+                </div>
+                
                 <div class="form-group">
                     <label for="picture">Kies een afbeelding: </label>
                     <input type="file" name="picture" class="form-control"></br>
