@@ -25,3 +25,5 @@ Route::post('/blog', function () {
 */
 
 Route::resource('blog', 'blogController');
+
+

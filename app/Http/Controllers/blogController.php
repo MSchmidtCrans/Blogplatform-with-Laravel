@@ -6,6 +6,7 @@ use App\blog;
 use Illuminate\Http\Request;
 use Storage;
 use File;
+use App\categorieSelect;
 
 class blogController extends Controller
 {
@@ -24,7 +25,10 @@ class blogController extends Controller
      */
     public function create()
     {
-        return view('blog.blogcreate');
+        $x = categorieSelect::All();
+
+        return view('blog.blogcreate', compact('x'));
+        //return view('blog.show', compact('blog'));
     }
 
     /**
