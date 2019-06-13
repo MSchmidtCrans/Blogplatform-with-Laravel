@@ -2,9 +2,11 @@
 
 @section('content')
 
-<div class="container-fluid">
-        <div class="container">
-        <h1>Pas de blog aan.</h1>
+<div class="container">
+
+        <div class="container text-center">
+                <h1>Pas de blog aan.</h1>
+                <img  src="{{url('uploads/'.$blog->filename)}}" class="img-thumbnail" alt="{{$blog->filename}}" style="width: 150px; height: auto;"></br>
         <div>
 
         <div class="container">
@@ -14,13 +16,13 @@
                         @method('PATCH')
 
                         <div class="form-group">
-                                <input type="text" name="titel" class="form-control" id="" value= "{{ $blog->titel }}"></br></br>
+                                <input type="text" name="titel" class="form-control" id="" value= "{{ $blog->titel }}">
+                        </div>
+
+                        <div class="form-group">        
                                 <textarea name="blogtext" class="form-control" id="" cols="60" rows="6">{{ $blog->blogtext }}</textarea></br>
                         </div>
-                        <div class="form-group">
-                                <label for="picture">Kies een afbeelding: </label> <img  src="{{url('uploads/'.$blog->filename)}}" alt="{{$blog->filename}}" style="width: 50px; height: auto;"></br></br>
-                                <input type="file" name="picture" class="form-control"></br></br>
-                        </div>
+               
                         <div class="form-group">
                         <button type="submit" class="btn btn-primary form-control">Update blog</button>
                         </div>

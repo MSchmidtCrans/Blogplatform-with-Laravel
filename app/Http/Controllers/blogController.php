@@ -93,34 +93,7 @@ class blogController extends Controller
             'blogtext' => 'required'
         ]);
 
-        //Set variables to make sure these columns have values of NULL    
-        $mime = null;
-        $filename = null;
-        $original_filename = null;
-
-        //Check if a picure has been chosen
-        //Then add picture to public library
-        if ($request->picture != null) {
-        //Get picture file and set variables
-        $picturefile = $request->file('picture');
-        $pictureExtension = $picturefile->getClientOriginalExtension();
-        $mime = $picturefile->getClientMimeType();
-        $filename = $picturefile->getFilename().'.'.$pictureExtension;
-        $original_filename = $picturefile->getClientOriginalName();
-
-        //Store file
-        Storage::disk('public')->put($picturefile->getFilename().'.'.$pictureExtension,  File::get($picturefile));
-        }
-
-        //Save new values to DB
-        $blog->titel = $request->titel;
-        $blog->blogtext = $request->blogtext;
-        $blog->mime = $mime;
-        $blog->original_filename = $original_filename;
-        $blog->filename = $filename;
-        $blog->save();
-
-        //$blog->update(request(['titel', 'blogtext']));
+       $blog->update(request(['titel', 'blogtext']));
 
         return redirect('/blog');
     }

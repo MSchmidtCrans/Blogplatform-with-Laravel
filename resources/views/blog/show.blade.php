@@ -2,35 +2,39 @@
 
 @section('content')
 
-<div class="container">
-    <h1>Blog titel: {{ $blog->titel }}</h1>
+<div class="container text-center">
+    <h1>Blog: {{ $blog->titel }}</h1>
+    <img  src="{{url('uploads/'.$blog->filename)}}" alt="{{$blog->filename}}" style="width: 200px; height: auto;">
 </div>
 
 <div class="container">
+     <div class="container">       
+            </br></br>
             {{ $blog->blogtext }} </br></br>
-            
-            <img  src="{{url('uploads/'.$blog->filename)}}" alt="{{$blog->filename}}" style="width: 200px; height: auto;"></br></br>
 
-    <a href="/blog/{{$blog->id }}/edit" class="btn btn-primary mb-2">Pas blog aan</a></br>
-    <a href="/blog" class="btn btn-secondary">Terug naar Blog overzicht</a></br>
-</div>
+    <a href="/blog/{{$blog->id }}/edit" class="btn btn-primary mb-2 btn-block">Pas blog aan</a></br>
+    <a href="/blog" class="btn btn-secondary btn-block">Terug naar Blog overzicht</a></br>
+    </div>
 
 
     @if (!$blog->categories->isEmpty())
-<div class="container">
-         <p>Categories: </p>
-        @foreach ($blog->categories as $categorie)
 
-            <li>
-                {{ $categorie->categorie }}
-            </li>
+            <div class="d-inline-flex">
+                <p>Categories: </p></br>
 
-        @endforeach
+                @foreach ($blog->categories as $categorie)
+                    </br>
+                    <div class="bg-secondary m-2 text-light p-1 rounded">
+                        {{ $categorie->categorie }}
+                    </div>
 
-    @else 
-    <div class="container">
-        <p>Geen categorieen aangezet in deze blog</p>
-    </div>
+                @endforeach
+
+            @else 
+            <div class="container">
+                <p>Geen categorieen aangezet in deze blog</p>
+            </div>
+
     @endif
 </div>
 
