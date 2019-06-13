@@ -3,7 +3,7 @@ In this project I'll create a blog platform based on user stories provided by th
 
 For user stories check: <a href="https://github.com/florisknol/codegorilla/blob/master/CodeGorilla_blogplatform.md">USER STORIES</a>
 
-Demo: <a href="https://mschmidtcrans.github.io/Blogplatform-with-Laravel/">Click me</a>
+Demo: <a href="https://mschmidtcrans.github.io/Blogplatform-with-Laravel/index">Click me</a>
 
 1. Setup laravel and github. -done-
 
@@ -41,8 +41,14 @@ Demo: <a href="https://mschmidtcrans.github.io/Blogplatform-with-Laravel/">Click
 
 6. Picture can now be added when editing a blog. -done-
 
-<strong>Blogger can create new categories.
-Blogger can assign an article to a category.
+<strong>Blogger can create new categories.</br>
+Blogger can assign an article to a category.</br>
 Blogger can assign an article to mutiple categories.</strong>
 
-1. 
+1. Set a new relation between blogs and categories.
+
+2. Categories must be CRUD.
+
+3. Categories can be assigned to articles.
+
+4. Articles can be assigned to categories.
