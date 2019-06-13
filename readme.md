@@ -45,7 +45,9 @@ Demo: <a href="https://mschmidtcrans.github.io/Blogplatform-with-Laravel/index">
 Blogger can assign an article to a category.</br>
 Blogger can assign an article to mutiple categories.</strong>
 
-1. Set a new relation between blogs and categories.
+1. Set a new relation between blogs and categories. -done-
+
+1a. Categories must be visible on the single blog view. -done-
 
 2. Categories must be CRUD.
 

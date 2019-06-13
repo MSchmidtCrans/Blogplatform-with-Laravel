@@ -8,7 +8,7 @@ class blog extends Model
 {
     protected $fillable = ['titel', 'blogtext'];
 
-    public function tasks() {
+    public function categories() {
         return $this->hasMany(categorie::class);
     }
 }
