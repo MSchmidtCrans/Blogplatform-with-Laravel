@@ -2,31 +2,46 @@
 
 @section('content')
 
-  <h1>Pas de blog aan.</h1>
+<div class="container-fluid">
+        <div class="container">
+        <h1>Pas de blog aan.</h1>
+        <div>
 
-  <form action="/blog/ {{ $blog->id }}" method="post" enctype="multipart/form-data">
-  
-            @csrf
-            @method('PATCH')
+        <div class="container">
+                <form action="/blog/ {{ $blog->id }}" method="post" enctype="multipart/form-data">
+                
+                        @csrf
+                        @method('PATCH')
 
+                        <div class="form-group">
+                                <input type="text" name="titel" class="form-control" id="" value= "{{ $blog->titel }}"></br></br>
+                                <textarea name="blogtext" class="form-control" id="" cols="60" rows="6">{{ $blog->blogtext }}</textarea></br>
+                        </div>
+                        <div class="form-group">
+                                <label for="picture">Kies een afbeelding: </label> <img  src="{{url('uploads/'.$blog->filename)}}" alt="{{$blog->filename}}" style="width: 50px; height: auto;"></br></br>
+                                <input type="file" name="picture" class="form-control"></br></br>
+                        </div>
+                        <div class="form-group">
+                        <button type="submit" class="btn btn-primary form-control">Update blog</button>
+                        </div>
+                        
+                </form>
+        </div>
 
-            <input type="text" name="titel" id="" value= "{{ $blog->titel }}"></br></br>
-            <textarea name="blogtext" id="" cols="60" rows="15">{{ $blog->blogtext }}</textarea></br>
+        <div class="container">
+                        <form action="/blog/ {{ $blog->id }}" method="post">
 
-            <label for="picture">Kies een afbeelding: </label>
-            <input type="file" name="picture"></br></br>
-        
-            <button type="submit">Update blog</button>
-            
-    </form>
+                                @csrf
+                                @method('DELETE')
+                                <div class="form-group">
+                                        <button type="submit" class="btn btn-danger form-control">Verwijder blog</button>
+                                </div>
+                                <div class="form-group">        
+                                        <a href="/blog" class="btn btn-secondary form-control">Terug naar Blog overzicht</a></br>
+                                </div>
 
-    <form action="/blog/ {{ $blog->id }}" method="post">
-
-            @csrf
-            @method('DELETE')
-
-            <button type="submit">Verwijder blog</button>
-    
-    </form>
-
+                        </form>
+                        
+        </div>
+</div>
 @endsection

@@ -8,13 +8,13 @@
 
 <li>
     <img  src="{{url('uploads/'.$blog->filename)}}" alt="{{$blog->filename}}" style="width: 20px; height: auto;">
-    <a href="/blog/ {{ $blog->id }}">
+    <a href="/blog/ {{ $blog->id }}" >
     {{$blog->titel}}
     </a></br></br>
 </li>
 
 @endforeach
 
-</br><a href="/blog/create">Maak een nieuwe blog</a>
+</br><a href="/blog/create" class="btn btn-primary">Maak een nieuwe blog</a>
 
 @endsection

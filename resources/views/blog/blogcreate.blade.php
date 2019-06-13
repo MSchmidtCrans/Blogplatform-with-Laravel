@@ -2,29 +2,39 @@
 
 @section('content')
 
-    <h1>Maak hier een nieuwe blog</h1>
-            
+    <div class="container">
+        <h1 >Maak hier een nieuwe blog</h1>
+    </div>
+
+    <div class='container'>
             <form  method="post"  action="/blog" enctype="multipart/form-data">
         
-            @csrf
-            
-            <input type="text" name="titel" id="" placeholder="Blog titel"></br></br>
-            <textarea name="blogtext" id="" cols="60" rows="15" placeholder="Type uw blog"></textarea></br>
-
-            <label for="picture">Kies een afbeelding: </label>
-            <input type="file" name="picture"></br>
-
-            <button type="submit">Opslaan</button>
-            
+                @csrf
+                <div class="form-group">
+                    <input type="text" name="titel" class="form-control" id="" placeholder="Blog titel"></br></br>
+                    <textarea name="blogtext" class="form-control" id="" cols="60" rows="6" placeholder="Type uw blog"></textarea></br>
+                </div>
+                <div class="form-group">
+                    <label for="picture">Kies een afbeelding: </label>
+                    <input type="file" name="picture" class="form-control"></br>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary form-control">Opslaan</button>
+                </div>
+                <div class="form-group">    
+                    <a href="/blog" class="btn btn-secondary form-control">Terug naar Blog overzicht</a></br>
+                </div>
             </form>
--
-            @if ($errors->any())
+    
+        @if ($errors->any())
+        <div class="container bg-danger text-light">
                 <ul>
                     @foreach ($errors->all() as $error)
                         <li>{{ $error }} </li>
                     @endforeach
                 </ul>
-            @endif
-        
+        </div>
+        @endif
+    </div>
 
 @endsection
