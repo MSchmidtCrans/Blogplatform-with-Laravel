@@ -47,10 +47,10 @@ Blogger can assign an article to mutiple categories.</strong>
 
 1. Set a new relation between blogs and categories. -done-
 
-1a. Categories must be visible on the single blog view. -done-
+2. Categories must be visible on the single blog view. -done-
 
-2. Categories must be CRUD.
+3. Categories must be CRUD.
 
-3. Categories can be assigned to articles.
+4. Categories can be assigned to articles.
 
-4. Articles can be assigned to categories.
+5. Articles can be assigned to categories.

@@ -12,15 +12,17 @@
             </br></br>
             {{ $blog->blogtext }} </br></br>
 
-    <a href="/blog/{{$blog->id }}/edit" class="btn btn-primary mb-2 btn-block">Pas blog aan</a></br>
-    <a href="/blog" class="btn btn-secondary btn-block">Terug naar Blog overzicht</a></br>
+    <a href="/blog/{{$blog->id }}/edit" class="btn btn-info mb-2 btn-block">Pas blog aan</a></br>
+    <a href="/blog" class="btn btn-info btn-block">Terug naar Blog overzicht</a></br>
     </div>
 
 
     @if (!$blog->categories->isEmpty())
 
+    Categories: 
+
             <div class="d-inline-flex">
-                <p>Categories: </p></br>
+                
 
                 @foreach ($blog->categories as $categorie)
                     </br>

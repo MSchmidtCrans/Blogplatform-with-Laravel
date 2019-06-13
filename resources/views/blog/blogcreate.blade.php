@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="container">
+    <div class="container text-center">
         <h1 >Maak hier een nieuwe blog</h1>
     </div>
 
@@ -19,10 +19,10 @@
                     <input type="file" name="picture" class="form-control"></br>
                 </div>
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary form-control">Opslaan</button>
+                    <button type="submit" class="btn btn-info form-control">Opslaan</button>
                 </div>
                 <div class="form-group">    
-                    <a href="/blog" class="btn btn-secondary form-control">Terug naar Blog overzicht</a></br>
+                    <a href="/blog" class="btn btn-info form-control">Terug naar Blog overzicht</a></br>
                 </div>
             </form>
     

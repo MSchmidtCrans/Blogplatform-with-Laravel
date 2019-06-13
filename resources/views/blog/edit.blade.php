@@ -24,7 +24,7 @@
                         </div>
                
                         <div class="form-group">
-                        <button type="submit" class="btn btn-primary form-control">Update blog</button>
+                        <button type="submit" class="btn btn-info form-control">Update blog</button>
                         </div>
                         
                 </form>
@@ -39,11 +39,22 @@
                                         <button type="submit" class="btn btn-danger form-control">Verwijder blog</button>
                                 </div>
                                 <div class="form-group">        
-                                        <a href="/blog" class="btn btn-secondary form-control">Terug naar Blog overzicht</a></br>
+                                        <a href="/blog" class="btn btn-info form-control">Terug naar Blog overzicht</a></br>
                                 </div>
 
                         </form>
                         
         </div>
+        
+        @if ($errors->any())
+        <div class="container bg-danger text-light">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }} </li>
+                    @endforeach
+                </ul>
+        </div>
+        @endif
+
 </div>
 @endsection
