@@ -23,6 +23,15 @@
                 @endforeach
 
                 <div class="form-group row">
+                            <div class="col-xs-3 mr-2">
+                                <input form="catcreate" type="text" name="categorienaam" class="form-control" placeholder="Nieuwe categorie" id="">   
+                            </div>
+                            <div class="form-group">
+                                <button form="catcreate" type="submit" class="btn btn-info">Categorie opslaan</button>
+                            </div> 
+                    </div>
+
+                <div class="form-group row">
                     <label for="picture">Kies een afbeelding: </label>
                     <input type="file" name="picture" class="form-control"></br>
                 </div>
@@ -34,16 +43,9 @@
                 </div>
             </form>
     
-            <form  action="/blog/create/categorie"  method="post" >
+            <form  action="/blog/create/categorie"  method="post" id="catcreate">
                     @csrf
-                    <div class="form-group row">
-                            <div class="col-xs-3 mr-2">
-                                <input type="text" name="categorienaam" class="form-control" placeholder="Nieuwe categorie" id="">   
-                            </div>
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-info">Categorie opslaan</button>
-                            </div> 
-                    </div> 
+                     
                 </form>
 
         @if ($errors->any())
