@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Storage;
 use File;
 use App\categorieSelect;
+use App\categorie;
 
 class blogController extends Controller
 {
@@ -38,11 +39,10 @@ class blogController extends Controller
     {
         request()->validate([
             'titel' => 'required',
-            'blogtext' => 'required'
+            'blogtext' => 'required',
+            'categorieChoice' =>'required'
         ]);
-        $test = $request->categorieChoice;
-        dd($test);
-
+        
         //Set variables to make sure these columns have values of NULL    
         $mime = null;
         $filename = null;
@@ -62,15 +62,25 @@ class blogController extends Controller
         Storage::disk('public')->put($picturefile->getFilename().'.'.$pictureExtension,  File::get($picturefile));
         }
 
-        //Save new values to DB
+        //Save new blog values to blog table
         $blog = new blog;
         $blog->titel = $request->titel;
         $blog->blogtext = $request->blogtext;
         $blog->mime = $mime;
         $blog->original_filename = $original_filename;
         $blog->filename = $filename;
-        
         $blog->save();
+
+        //Save new values to categorie select table
+        $categoriesArr = $request->categorieChoice;
+
+        foreach($categoriesArr as $categorieSel) {
+            $categorie = new categorie;
+            $categorie->categorie = $categorieSel;
+            $categorie->blog_id = $blog->id;
+            $categorie->save();
+        }
+       
 
         return redirect('/blog');
     }
