@@ -59,6 +59,6 @@ Blogger can assign an article to mutiple categories.</strong>
 
 7. Add create categorie button to create view -done-
 
-8. Add new categorie to categories table
+8. Add new categorie to categories table -done-
 
-9. New categorie must be selectable from create view
+9. New categorie must be selectable from create view -done-

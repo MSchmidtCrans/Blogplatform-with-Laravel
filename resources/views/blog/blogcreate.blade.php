@@ -18,7 +18,7 @@
                     
                 @foreach ($x as $option)
                     <div class="form-check-inline form-group row">
-                            <input type="checkbox" class="form-check-input" id="" name="categorieChoice[]" value="{{ $option->categorieOption }}"> {{ $option->categorieOption }}
+                            <input type="checkbox" class="form-check-input ml-2" id="" name="categorieChoice[]" value="{{ $option->categorieOption }}"> {{ $option->categorieOption }}
                     </div>
                 @endforeach
 
