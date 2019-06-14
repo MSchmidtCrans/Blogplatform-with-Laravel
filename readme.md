@@ -49,10 +49,16 @@ Blogger can assign an article to mutiple categories.</strong>
 
 2. Categories must be visible on the single blog view. -done-
 
-3. Categories must be pulled from a seperate table. This is to maintain categories.
+3. Categories must be pulled from a seperate table. This is to maintain categories. -done-
 
-4. Categories can be assigned to articles.
+4. Categories can be assigned to articles. -done-
 
-5. Articles can be assigned to categories.
+5. Articles can be assigned to categories. -stripped-
 
-6. Add categories checkbox choice to create blog form
+6. Add categories checkbox choice to create blog form -done-
+
+7. Add create categorie button to create view -done-
+
+8. Add new categorie to categories table
+
+9. New categorie must be selectable from create view
