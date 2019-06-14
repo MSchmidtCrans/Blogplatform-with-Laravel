@@ -19,11 +19,10 @@
 
     @if (!$blog->categories->isEmpty())
 
-    Categories: 
-
-            <div class="d-inline-flex">
-                
-
+    <div class="container">
+        <p>Categories:  </p>
+    </div>
+            <div class="container d-inline-flex">
                 @foreach ($blog->categories as $categorie)
                     </br>
                     <div class="bg-secondary m-2 text-light p-1 rounded">

@@ -16,14 +16,15 @@
                 </div>
                 
                 <div>
-                Categorie: 
-                @foreach ($x as $option)
+                <p>Categorie: </p> 
                 <div class="form-check-inline form-group">
-                        <input type="checkbox" class="form-check-input" id="" name="check1"> {{ $option->categorieOption }}
-                </div> 
-                @endforeach
-                </div>
+                @foreach ($x as $option)
+                        <input type="checkbox" class="form-check-input" id="" name="categorieChoice[]" value="{{ $option->categorieOption }}"> {{ $option->categorieOption }}
                 
+                @endforeach
+                </div> 
+                </div>
+
                 <div class="form-group">
                     <label for="picture">Kies een afbeelding: </label>
                     <input type="file" name="picture" class="form-control"></br>

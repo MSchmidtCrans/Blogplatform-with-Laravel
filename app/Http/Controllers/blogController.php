@@ -40,7 +40,9 @@ class blogController extends Controller
             'titel' => 'required',
             'blogtext' => 'required'
         ]);
-       
+        $test = $request->categorieChoice;
+        dd($test);
+
         //Set variables to make sure these columns have values of NULL    
         $mime = null;
         $filename = null;
