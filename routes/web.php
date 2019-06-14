@@ -26,4 +26,6 @@ Route::post('/blog', function () {
 
 Route::resource('blog', 'blogController');
 
+Route::POST('blog/create/categorie' , 'categorieController@create');
+
 
